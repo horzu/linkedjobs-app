@@ -17,15 +17,21 @@ const Home = () => {
 					},
 					headerShadowVisible: false,
 					headerLeft: () => {
-						return <ScreenHeaderBtn iconUrl={icons.menu} dimensions="60%" />;
+						return <ScreenHeaderBtn iconUrl={icons.menu} dimension="60%" />;
 					},
 					headerRight: () => {
-						return <ScreenHeaderBtn iconUrl={icons.profile} dimensions="100%" />;
+						return <ScreenHeaderBtn iconUrl={images.profile} dimension="100%" />;
 					},
 					headerTitle: "",
 				}}
 			/>
-			<Text>Helloo</Text>
+			<ScrollView>
+				<View style={{ flex: 1, padding: SIZES.medium }}>
+					<Welcome />
+					<Popularjobs />
+					<Nearbyjobs />
+				</View>
+			</ScrollView>
 		</SafeAreaView>
 	);
 };
