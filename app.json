@@ -8,6 +8,14 @@
       "expo-router"
     ],
     "name": "linkedjobs-app",
-    "slug": "linkedjobs-app"
+    "slug": "linkedjobs-app",
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "a2a94707-8abc-46ac-bfb4-a08f0c6b2fd7"
+      }
+    }
   }
 }

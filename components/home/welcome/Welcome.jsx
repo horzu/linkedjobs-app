@@ -23,7 +23,7 @@ const Welcome = ({ searchTerm, setSearchTerm, handleClick }) => {
 					<TextInput
 						style={styles.searchInput}
 						value={searchTerm}
-						onChange={(text) => setSearchTerm(text.value)}
+						onChangeText={(text) => setSearchTerm(text)}
 						placeholder="What are you looking for"></TextInput>
 				</View>
 
@@ -36,7 +36,12 @@ const Welcome = ({ searchTerm, setSearchTerm, handleClick }) => {
 				<FlatList
 					data={jobTypes}
 					renderItem={({ item }) => (
-						<TouchableOpacity style={styles.tab(activeJobType, item)}>
+						<TouchableOpacity
+							style={styles.tab(activeJobType, item)}
+							onPress={() => {
+								setActiveJobType(item);
+								router.push(`/search/${item}`);
+							}}>
 							<Text style={styles.tabText(activeJobType, item)}>{item}</Text>
 						</TouchableOpacity>
 					)}
